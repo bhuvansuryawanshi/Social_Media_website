@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- external css -->
+    <link rel="stylesheet" href="body-style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar-section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white mb-4 rounded shadow ">
+            <div class="container-lg">
+                <!-- logo -->
+                <a class="navbar-brand nav-logo" href="#">
+                    <img src="/Images/M_logo.png" alt="Manasvi logo">
+                </a>
+                <!-- toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+                <!-- menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <form class=" my-2 my-md-0">
+                        <div class="position-relative">
+                            <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                            <i
+                                class="fa-solid fa-magnifying-glass position-absolute top-50 translate-middle-y end-0 me-3"></i>
+                        </div>
+                    </form>
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item mx-1">
+                            <a class="nav-link active" aria-current="page" href="home.html"><i
+                                    class="fa-solid fa-house"></i>
+                                Home</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="nav-link text-dark" href="events.html">
+                                <i class="fa-solid fa-calendar"></i> Events
+                            </a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="nav-link text-dark " href="message.html"><i class="fa-solid fa-message"></i>
+                                Message</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="nav-link text-dark" href="notification.html"><i class="fa-solid fa-bell"></i>
+                                Notification</a>
+                        </li>
+                        <li class="nav-item mx-lg-1 mt-2 mt-lg-0 order-first order-lg-last">
+                            <button class="btn border text-primary " data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                title="Profile">
+                                <a class="text-decoration-none" href="profile.html"><i class="fa-solid fa-user"></i>
+                                    Bhuvan</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <!-- notificaton heading -->
+        <div class="row">
+            <div class="col-12">
+                <div class="col-12 bg-white rounded p-3 d-sm-flex justify-content-sm-between align-content-center card-light-gray">
+
+                    <h4 class="text-center mb-2 mb-sm-0 p-0">Notifications</h4>
+    
+                    <div class="notifi-btn text-center">
+                        <a href="#" class="btn btn-primary btn-sm mx-sm-1 ">All</a>
+                        <a href="#" class="btn btn-primary btn-sm mx-1">Mentions</a>
+                        <a class="btn  btn-primary btn-sm dropdown-toggle mx-sm-1" href="#" role="button"
+                            id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Post
+                        </a>
+                        <ul class="dropdown-menu mx-1" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">All</a></li>
+                            <li><a class="dropdown-item" href="#">Likes</a></li>
+                            <li><a class="dropdown-item" href="#">Comments</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- notification 1 -->
+        <div class="row mt-2">
+           <div class="col-12">
+              <!-- notification card-1 -->
+              <div class="card d-flex flex-row justify-content-around border-0 notifi-card p-2 card-dark">
+                <div class="activity-image">
+                    <img class="img-thumbnail rounded-circle " src="Images/profile-image.jpeg" alt="profile picture"
+                        style="max-width: 70px; min-height: 70px; object-fit: cover;">
+                </div>
+
+                <div class="image-content mx-3 flex-wrap">
+                    <p>
+                        <span class="fw-bold ">Pratik Borese</span>
+                        posted : Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus facilis id
+                        animi, vel Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad possimus molestias
+                        quidem nobis corrupti voluptatum odio ipsum nisi natus! Beatae.vero omnis expedita a culpa.
+                        Possimus.
+                    </p>
+                </div>
+
+                <div class="dropdown ms-auto">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Delete notification</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                    </ul>
+                </div>
+            </div>
+           </div>
+        </div>
+
+          <!-- notification 2 -->
+          <div class="row mt-2">
+            <div class="col-12">
+               <!-- notification card-1 -->
+               <div class="card d-flex flex-row justify-content-around border-0 notifi-card p-2 card-dark">
+                 <div class="activity-image">
+                     <img class="img-thumbnail rounded-circle " src="Images/profile-image.jpeg" alt="profile picture"
+                         style="max-width: 70px; min-height: 70px; object-fit: cover;">
+                 </div>
+ 
+                 <div class="image-content mx-3 flex-wrap">
+                     <p>
+                         <span class="fw-bold ">Shreyas Jadhav</span>
+                         posted : Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus facilis id
+                         animi, vel Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad possimus molestias
+                         quidem nobis corrupti voluptatum odio ipsum nisi natus! Beatae.vero omnis expedita a culpa.
+                         Possimus.
+                     </p>
+                 </div>
+ 
+                 <div class="dropdown ms-auto">
+                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                         data-bs-toggle="dropdown" aria-expanded="false">
+                         <i class="fa-solid fa-ellipsis-vertical"></i>
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                         <li><a class="dropdown-item" href="#">Delete notification</a></li>
+                         <li><a class="dropdown-item" href="#">Report</a></li>
+                     </ul>
+                 </div>
+             </div>
+            </div>
+         </div>
+
+         <!-- notification 3 -->
+         <div class="row mt-2">
+            <div class="col-12">
+               <!-- notification card-1 -->
+               <div class="card d-flex flex-row justify-content-around border-0 notifi-card p-2 card-dark">
+                 <div class="activity-image">
+                     <img class="img-thumbnail rounded-circle " src="Images/profile-image.jpeg" alt="profile picture"
+                         style="max-width: 70px; min-height: 70px; object-fit: cover;">
+                 </div>
+ 
+                 <div class="image-content mx-3 flex-wrap">
+                     <p>
+                         <span class="fw-bold ">Pranav Patil</span>
+                         commented on your post Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla provident harum, consectetur iusto minus reiciendis nostrum sint obcaecati vero autem.
+                     </p>
+                 </div>
+ 
+                 <div class="dropdown ms-auto">
+                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                         data-bs-toggle="dropdown" aria-expanded="false">
+                         <i class="fa-solid fa-ellipsis-vertical"></i>
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                         <li><a class="dropdown-item" href="#">Delete notification</a></li>
+                         <li><a class="dropdown-item" href="#">Report</a></li>
+                     </ul>
+                 </div>
+             </div>
+            </div>
+         </div>
+
+          <!-- notification 4 -->
+          <div class="row mt-2">
+            <div class="col-12">
+               <!-- notification card-1 -->
+               <div class="card d-flex flex-row justify-content-around border-0 notifi-card p-2 card-dark">
+                 <div class="activity-image">
+                     <img class="img-thumbnail rounded-circle " src="Images/profile-image.jpeg" alt="profile picture"
+                         style="max-width: 70px; min-height: 70px; object-fit: cover;">
+                 </div>
+ 
+                 <div class="image-content mx-3 flex-wrap">
+                     <p>
+                         <span class="fw-bold ">Yash Jadhav </span>
+                         like your post  dolor sit amet consectetur adipisicing elit. Nulla provident harum, consectetur iusto minus reiciendis nostrum sint obcaecati vero autem.
+                     </p>
+                 </div>
+ 
+                 <div class="dropdown ms-auto">
+                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                         data-bs-toggle="dropdown" aria-expanded="false">
+                         <i class="fa-solid fa-ellipsis-vertical"></i>
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                         <li><a class="dropdown-item" href="#">Delete notification</a></li>
+                         <li><a class="dropdown-item" href="#">Report</a></li>
+                     </ul>
+                 </div>
+             </div>
+            </div>
+         </div>
+    </div>
+    <script src="dark-mode.js"></script>
+</body>
+
+</html>

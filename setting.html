@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- external css -->
+    <link rel="stylesheet" href="body-style.css">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="container">
+
+        <div class="row my-2">
+            <div class="col-12">
+                <div class="card border-0 rounded p-2">
+                    <h1 class="h3 p-0 m-0">Settings</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings options -->
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card  border-0 p-2">
+                    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                            aria-selected="true">Account Info</button>
+
+                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                            aria-selected="false">Password</button>
+
+                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                            aria-selected="false">Display</button>
+
+                        <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                            aria-selected="false">Privacy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 mt-2 mt-lg-0">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <!-- INFORMATION SECTION -->
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab" tabindex="0">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Information</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="form-group ">
+                                                <label for="inputUsername">Username</label>
+                                                <input type="text" class="form-control" id="inputUsername"
+                                                    placeholder="Username">
+                                            </div>
+
+                                            <div class="form-group mt-2">
+                                                <label for="inputFirstName">Full name</label>
+                                                <input type="text" class="form-control" id="inputFirstName"
+                                                    placeholder="First name">
+                                            </div>
+
+                                            <div class="form-group mt-2">
+                                                <label for="inputEmail4">Employee ID</label>
+                                                <input type="email" class="form-control" id="inputEmail4"
+                                                    placeholder="Employee ID">
+                                            </div>
+
+                                            <div class="form-group mt-2">
+                                                <label for="inputEmail4">Email</label>
+                                                <input type="email" class="form-control" id="inputEmail4"
+                                                    placeholder="Email">
+                                            </div>
+
+                                            <div class="form-group mt-2">
+                                                <label for="inputEmail4">Contact number</label>
+                                                <input type="email" class="form-control" id="inputEmail4"
+                                                    placeholder="Contact number">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="text-center">
+                                                <img alt="Andrew Jones"
+                                                    src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                                    class="rounded-circle img-responsive mt-2" width="128" height="128">
+                                                <div class="mt-2">
+                                                    <span class="btn btn-primary"><i class="fa fa-upload"></i></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary mt-2">Save changes</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PASSWORD SECTION -->
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab" tabindex="0">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Change Password</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="form-group ">
+                                                <label for="inputUsername">Current Password</label>
+                                                <input type="password" class="form-control" id="inputUsername"
+                                                    placeholder="Current Password">
+                                            </div>
+
+                                            <div class="form-group mt-2">
+                                                <label for="inputFirstName">New Password</label>
+                                                <input type="text" class="form-control" id="inputFirstName"
+                                                    placeholder="New Password">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary mt-2">Save changes</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Display -->
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab" tabindex="0">
+                        
+                        <div class="row p-2">
+                            <div class="col-12">
+                                <div class="card border-0 shadow p-2">
+                                    <h5 class="fw-normal">Display</h5>
+                                    <div class="dark-mode-btn d-flex justify-content-between align-items-center pt-2">
+                                        <p class="p-0 m-0 ">Dark Mode</p>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" id="dark-mode-toggle" type="checkbox"
+                                                role="switch" id="flexSwitchCheckDefault">
+                                            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                        aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="dark-mode.js"></script>
+</body>
+
+</html>
+
+<!-- dark mode code  -->
+<!-- <div class="row p-2">
+    <div class="col-12">
+        <div class="card border-0 shadow p-2">
+            <h5 class="fw-normal" >Display</h5>
+            <div class="dark-mode-btn d-flex justify-content-between align-items-center pt-2">
+                <p class="p-0 m-0 ">Dark Mode</p>
+                <div class="form-check form-switch">
+                    <input class="form-check-input"  id="dark-mode-toggle" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                  </div>
+            </div>
+           
+        </div>
+    </div>
+</div> -->

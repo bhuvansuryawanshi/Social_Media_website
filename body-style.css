@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --white: #ffffff;
+    --white-smoke: #EDEDED;
+    --blue: #0D6EFD;
+    --black: #000000;
+    --gray: #1B1F23;
+    --smoke-gray :	#848884;
+}
+
+/* COMMAN STYLE */
+.navbar-light .navbar-toggler {
+    color: var(--black);
+    border-color: var(--white);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.btn-group-sm>.btn,
+.btn-sm {
+    &focus {
+        box-shadow: none;
+    }
+}
+
+img {
+    object-fit: cover;
+}
+
+/* MAIN BODY */
+body {
+    background-color: var(--white-smoke);
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+
+/* NAVBAR SECTION */
+.navbar-section {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+/* MAIN SECTION */
+.image img {
+    width: 80%;
+}
+
+.comment-section a i {
+    font-size: 3rem;
+}
+
+
+/* PROFILE SECTION */
+.profile-image img {
+    width: 40%;
+}
+
+.profile-section {
+    position: fixed;
+    left: 73%;
+}
+
+
+/* ACTIVITY SECTION */
+.activity a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+/*  MESSAGE SECTION */
+.message-list-box::-webkit-scrollbar{
+    width: 7px;
+   
+}
+
+.message-list-box::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background-color: var(--white-smoke);
+}
+
+.message-list-box::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 8px;
+}
+
+
+.message-list-box {
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+.message-box {
+    height: 210px;
+    overflow-y: auto;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.btn-secondary {
+    font-size: 1.2rem;
+    color: var(--blue);
+    background-color: var(--white);
+    border-color: var(--white);
+
+    &:hover {
+        color: var(--blue);
+        background-color: var(--white);
+        border-color: var(--white);
+    }
+
+}
+
+.btn-check:focus+.btn-secondary,
+.btn-secondary:focus {
+    color: var(--blue);
+    background-color: var(--white);
+    border-color: var(--white);
+    box-shadow: none;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/*  NOTIFICATION SECTION */
+/* .notifi-card:hover {
+    background-color: var(--white-smoke);
+} */
+
+
+
+
+/*  RESPONSIVE */
+@media (max-width: 768px) {
+    .message-searchbar form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .chat-options {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .chat-options .send-btn {
+        margin-top: 10px;
+        text-align: right;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .message-list-box,
+    .message-box {
+        max-height: 470px;
+    }
+
+    .col-sm-4,
+    .col-sm-8 {
+        width: 100%;
+    }
+
+    .row.mt-2 {
+        flex-direction: column;
+    }
+}
+
+
+/* DARK MODE */
+
+body.dark-mode {
+    background-color: black ;
+}
+
+/* navbar color gray */
+.dark-mode .navbar {
+    background-color: var(--gray) !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+
+/* navbar items color white  */
+.dark-mode .nav-link {
+    color: var(--white) !important;
+}
+
+/* for card bg light gray */
+.dark-mode .card-light-gray {
+    background-color: var( --smoke-gray) !important;
+}
+
+/* for card gray */
+.dark-mode .card-dark {
+    background-color: var(--gray) !important;
+}
+
+.dark-mode .card  {
+    color: var(--white);
+}
+
+/* for color white */
+.dark-mode .color-white {
+    color: var(--white);
+}
+
+.dark-mode .btn-secondary {
+    
+    background-color: var(--gray);
+    border: none;
+    color: white;
+}
