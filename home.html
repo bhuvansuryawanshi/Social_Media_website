@@ -36,7 +36,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    
+
 
 </head>
 
@@ -146,17 +146,22 @@
 
                 <!-- post options card -->
                 <div class="card  p-3 shadow rounded-2 card-dark">
-                   
-                    <input type="text" class="form-control"  data-bs-toggle="modal" data-bs-target="#modal" id="text-input" placeholder="Write a post or blog">
+
+                    <input type="text" class="form-control" data-bs-toggle="modal" data-bs-target="#modal"
+                        id="text-input" placeholder="Write a post or blog">
                     <label for="text-input" class="form-label"></label>
 
                     <div class="post-options d-flex justify-content-between align-items-center">
-                        
-                        <a class=" text-decoration-none  px-1 px-sm-0" href="#" data-bs-target="#modal" data-bs-toggle="modal">
+
+                        <!-- photo -->
+                        <a class=" text-decoration-none  px-1 px-sm-0" href="#" data-bs-target="#modal"
+                            data-bs-toggle="modal">
                             <i class="fa-regular fa-images"></i> Photos
                         </a>
 
-                        <a class="text-decoration-none  px-1 px-sm-0" href="#" data-bs-target="#modal" data-bs-toggle="modal">
+                        <!-- video -->
+                        <a class="text-decoration-none  px-1 px-sm-0" href="#" data-bs-target="#modal"
+                            data-bs-toggle="modal">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                 class="bi bi-camera-video" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -164,10 +169,13 @@
                             </svg> Videos
                         </a>
 
-                        <a class="text-decoration-none  px-1 px-sm-0" href="#" data-bs-target="#modal" data-bs-toggle="modal">
+                        <!-- blog -->
+                        <a class="text-decoration-none  px-1 px-sm-0" href="#" data-bs-target="#modal"
+                            data-bs-toggle="modal">
                             <i class="fa-solid fa-newspaper"></i> Blogs
                         </a>
 
+                        <!-- boostrap model -->
                         <div class="modal fade" id="modal">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
@@ -175,14 +183,7 @@
                                         <form action="" method="post">
                                             <div class="row">
                                                 <div class="col-12 text-area">
-                                                    <!-- <div class="form-floating">
-                                                        <textarea class="form-control"
-                                                            placeholder="Leave a comment here" id="floatingTextarea2"
-                                                            style="height: 200px"></textarea>
-                                                        <label for="floatingTextarea2">Write Something</label>
-                                                    </div> -->
                                                     <div id="summernote"></div>
-                                                    
                                                 </div>
                                             </div>
                                             <br>
@@ -192,6 +193,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                 </div>
@@ -204,9 +206,10 @@
                         <p class="fw-bold fs-5 mt-2 mx-2">Pratik</p>
                     </div>
                     <div class="captions px-3">
-                        <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem eaque omnis
+                        <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem eaque
+                            omnis
                             repudiandae expedita magni itaque qui culpa voluptatum. Beatae, asperiores?</p>
-                       
+
                     </div>
 
                     <div class="image text-center">
@@ -273,7 +276,7 @@
 
             </div>
 
-            <!-- profile section column -->
+            <!-- PROFILE SECTION -->
             <div class="col-4 col-md-3 d-none d-md-block">
                 <div class="card profile-section card-dark shadow">
                     <div class="text-center pt-4">
@@ -285,28 +288,71 @@
                             <p class="fw-bold m-0 p-0">Bhuvan Suryawnshi</p>
                             <p>Jr.FrontEnd Developer</p>
                         </div>
+                        <div class="followers">
+                            <a href="#" class=" text-decoration-none px-1 ">500+ Connections</a> <br>
+                            <a href="#" class=" text-decoration-none px-1">700+ Followers </a>
+                        </div>
+                        
+                    </div>
+
+                    <!-- socila media icon -->
+                    
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush rounded-3">
+                                <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                    <i class="fab fa-github fa-lg text-body"></i>
+                                    <p class="mb-0">mdbootstrap</p>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                    <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
+                                    <p class="mb-0">@mdbootstrap</p>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                    <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
+                                    <p class="mb-0">mdbootstrap</p>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                    <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+                                    <p class="mb-0">mdbootstrap</p>
+                                </li>
+                            </ul>
+                        </div>
+                    <!-- socila media icon -->
+
+                    <div class="div text-center">
                         <a href="profile.html" class="btn bg-primary btn-sm text-white mb-3">View</a>
                     </div>
+
                 </div>
+
+
+
+
             </div>
+
         </div>
     </div>
+
+
+    <!-- Script tag -->
     <script src="dark-mode.js"></script>
     <script>
         $('#summernote').summernote({
-          placeholder: 'Write something',
-          tabsize: 2,
-          height: 300,
-          toolbar: [
-                    // ['style', ['style']],
-                    ['font', ['bold', 'underline', 'clear']],
-                    ['color', ['color']],
-                    ['para', ['ul', 'ol', 'paragraph']],
-                    // ['table', ['table']],
-                    ['insert', ['link', 'picture', 'video']],
-                    // ['view', ['help']]
-                ]
+            placeholder: 'Write something',
+            tabsize: 2,
+            height: 300,
+            toolbar: [
+                // ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                // ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                // ['view', ['help']]
+            ]
         });
-      </script>
+    </script>
+
 </body>
+
 </html>

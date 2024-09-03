@@ -78,10 +78,253 @@
                                 <h5 class="card-title mb-0">Information</h5>
                             </div>
                             <div class="card-body">
-                                <form>
+                                <!-- INFORMTAION EDIT SECTION-->
+
+                                 <!-- FORM START -->
+                                 <form name="edit-profile" onsubmit="return validateForm();">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <div class="form-group ">
+                                
+                                            <div class="mb-3">
+                                                <label for="FullName" class="form-label">Full Name</label>
+                                                <input type="text" id="FullName" class="form-control" name="full-name">
+                                                <small class="text-danger" id="fullname-validation"></small>
+                                            </div>
+                                
+                                            <div class="mb-3">
+                                                <label for="Email" class="form-label">Email</label>
+                                                <input type="email" id="Email" class="form-control" name="u_email">
+                                                <small class="text-danger" id="email-validation"></small>
+                                            </div>
+                                
+                                            <div class="mb-3">
+                                                <label for="Username" class="form-label">Username</label>
+                                                <input type="text" id="Username" class="form-control" name="u_name">
+                                                <small class="text-danger" id="username-validation"></small>
+                                            </div>
+                                
+                                            <div class="mb-3">
+                                                <label for="employee-id" class="form-label">Employee ID</label>
+                                                <input type="text" id="employee-id" class="form-control" name="emp_id">
+                                                <small class="text-danger" id="empId-validation"></small>
+                                            </div>
+                                
+                                            <div class="mb-3">
+                                                <label for="contact-no" class="form-label">Contact Number</label>
+                                                <input type="text" id="contact-no" class="form-control" name="u_contact">
+                                                <small class="text-danger" id="contact-validation"></small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="text-center">
+                                                <img alt="Profile Picture"
+                                                    src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                                    class="rounded-circle img-responsive mt-2" width="128" height="128">
+                                                <div class="mt-2">
+                                                    <span class="btn btn-primary"><i class="fa fa-upload"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- SUBMIT BUTTON -->
+                                    <button type="submit" class="btn btn-primary mt-2">Save changes</button>
+                                </form>
+                                <!-- FORM END-->
+                            </div>
+                        </div>
+                    </div>
+                
+
+                    <!-- PASSWORD SECTION -->
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab" tabindex="0">
+
+                        <div class="card">
+
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Change Password</h5>
+                            </div>
+
+                            <div class="card-body">
+                                 <!-- FORM START-->
+                                 <form name="login_form" onsubmit="return validateLogin();">
+                                    <div class="mb-3">
+                                        <label for="oldpassword" class="form-label">Password</label>
+                                        <input type="text" id="oldpassword" class="form-control" name="old-password">
+                                        <small class="text-danger" id="old-password-validation"></small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="newPassword" class="form-label">Old Password</label>
+                                        <input type="password" id="newPassword" class="form-control" name="new-Password">
+                                        <small class="text-danger" id="new-password-validation"></small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <button type="submit" class="btn btn-primary w-100">Log In</button>
+                                    </div>
+                                    <!-- <div class="signin text-center">
+                                        <span>Don't have an account? <a href="#">Sign Up here</a></span>
+                                    </div> -->
+                                </form>
+                                 <!-- FORM END-->
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- DISPLAY SECTION -->
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab" tabindex="0">
+                        
+                        <div class="row p-2">
+                            <div class="col-12">
+                                <div class="card border-0 shadow p-2">
+                                    <h5 class="fw-normal">Display</h5>
+                                    <div class="dark-mode-btn d-flex justify-content-between align-items-center pt-2">
+                                        <p class="p-0 m-0 ">Dark Mode</p>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" id="dark-mode-toggle" type="checkbox"
+                                                role="switch" id="flexSwitchCheckDefault">
+                                            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                        aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="dark-mode.js"></script>
+
+    <!-- EDIT PROFILE VALIDATION -->
+    <script>
+        function validateForm() {
+            let isValid = true;
+    
+            // Full Name Validation
+            const fullName = document.getElementById('FullName');
+            const fullNameValidation = document.getElementById('fullname-validation');
+            if (fullName.value.trim() === "") {
+                fullName.classList.add('is-invalid');
+                fullNameValidation.innerText = "Full Name is required.";
+                isValid = false;
+            } else {
+                fullName.classList.remove('is-invalid');
+                fullName.classList.add('is-valid');
+                fullNameValidation.innerText = "";
+            }
+    
+            // Email Validation
+            const email = document.getElementById('Email');
+            const emailValidation = document.getElementById('email-validation');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.value.trim() === "") {
+                email.classList.add('is-invalid');
+                emailValidation.innerText = "Email is required.";
+                isValid = false;
+            } else if (!emailPattern.test(email.value.trim())) {
+                email.classList.add('is-invalid');
+                emailValidation.innerText = "Please enter a valid email address.";
+                isValid = false;
+            } else {
+                email.classList.remove('is-invalid');
+                email.classList.add('is-valid');
+                emailValidation.innerText = "";
+            }
+    
+            // Username Validation
+            const username = document.getElementById('Username');
+            const usernameValidation = document.getElementById('username-validation');
+            if (username.value.trim() === "") {
+                username.classList.add('is-invalid');
+                usernameValidation.innerText = "Username is required.";
+                isValid = false;
+            } else {
+                username.classList.remove('is-invalid');
+                username.classList.add('is-valid');
+                usernameValidation.innerText = "";
+            }
+    
+            // Employee ID Validation
+            const empId = document.getElementById('employee-id');
+            const empIdValidation = document.getElementById('empId-validation');
+            if (empId.value.trim() === "") {
+                empId.classList.add('is-invalid');
+                empIdValidation.innerText = "Employee ID is required.";
+                isValid = false;
+            } else {
+                empId.classList.remove('is-invalid');
+                empId.classList.add('is-valid');
+                empIdValidation.innerText = "";
+            }
+    
+            // Contact Number Validation
+            const contact = document.getElementById('contact-no');
+            const contactValidation = document.getElementById('contact-validation');
+            const contactPattern = /^\d{10}$/; // Assumes a 10-digit number
+            if (contact.value.trim() === "") {
+                contact.classList.add('is-invalid');
+                contactValidation.innerText = "Contact Number is required.";
+                isValid = false;
+            } else if (!contactPattern.test(contact.value.trim())) {
+                contact.classList.add('is-invalid');
+                contactValidation.innerText = "Please enter a valid 10-digit contact number.";
+                isValid = false;
+            } else {
+                contact.classList.remove('is-invalid');
+                contact.classList.add('is-valid');
+                contactValidation.innerText = "";
+            }
+    
+            return isValid;
+        }
+    </script>
+
+
+    <!-- CHANGE PASSWORD VALIDATION -->
+    <script>
+         function validateLogin() {
+            let isValid = true;
+
+            const oldpassword = document.getElementById('oldpassword');
+            const oldPasswordValidation = document.getElementById('old-password-validation');
+           
+            if (oldpassword.value.trim() === "") {
+                oldpassword.classList.add('is-invalid');
+                oldPasswordValidation.innerText = "Password is required.";
+                isValid = false;
+            } else {
+                oldpassword.classList.remove('is-invalid');
+                oldpassword.classList.add('is-valid');
+                oldPasswordValidation.innerText = "";
+            }
+
+            const newPassword = document.getElementById('newPassword');
+            const newPasswordValidation = document.getElementById('new-password-validation');
+            if (newPassword.value.trim() === "") {
+                newPassword.classList.add('is-invalid');
+                newPasswordValidation.innerText = "New Password is required.";
+                isValid = false;
+            } else {
+                newPassword.classList.remove('is-invalid');
+                newPassword.classList.add('is-valid');
+                newPasswordValidation.innerText = "";
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+<!-- <div class="form-group ">
                                                 <label for="inputUsername">Username</label>
                                                 <input type="text" class="form-control" id="inputUsername"
                                                     placeholder="Username">
@@ -109,107 +352,4 @@
                                                 <label for="inputEmail4">Contact number</label>
                                                 <input type="email" class="form-control" id="inputEmail4"
                                                     placeholder="Contact number">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="text-center">
-                                                <img alt="Andrew Jones"
-                                                    src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                                                    class="rounded-circle img-responsive mt-2" width="128" height="128">
-                                                <div class="mt-2">
-                                                    <span class="btn btn-primary"><i class="fa fa-upload"></i></span>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <button type="submit" class="btn btn-primary mt-2">Save changes</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PASSWORD SECTION -->
-                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                        aria-labelledby="v-pills-profile-tab" tabindex="0">
-
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title mb-0">Change Password</h5>
-                            </div>
-                            <div class="card-body">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <div class="form-group ">
-                                                <label for="inputUsername">Current Password</label>
-                                                <input type="password" class="form-control" id="inputUsername"
-                                                    placeholder="Current Password">
-                                            </div>
-
-                                            <div class="form-group mt-2">
-                                                <label for="inputFirstName">New Password</label>
-                                                <input type="text" class="form-control" id="inputFirstName"
-                                                    placeholder="New Password">
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <button type="submit" class="btn btn-primary mt-2">Save changes</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <!-- Display -->
-                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                        aria-labelledby="v-pills-messages-tab" tabindex="0">
-                        
-                        <div class="row p-2">
-                            <div class="col-12">
-                                <div class="card border-0 shadow p-2">
-                                    <h5 class="fw-normal">Display</h5>
-                                    <div class="dark-mode-btn d-flex justify-content-between align-items-center pt-2">
-                                        <p class="p-0 m-0 ">Dark Mode</p>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" id="dark-mode-toggle" type="checkbox"
-                                                role="switch" id="flexSwitchCheckDefault">
-                                            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-                        aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="dark-mode.js"></script>
-</body>
-
-</html>
-
-<!-- dark mode code  -->
-<!-- <div class="row p-2">
-    <div class="col-12">
-        <div class="card border-0 shadow p-2">
-            <h5 class="fw-normal" >Display</h5>
-            <div class="dark-mode-btn d-flex justify-content-between align-items-center pt-2">
-                <p class="p-0 m-0 ">Dark Mode</p>
-                <div class="form-check form-switch">
-                    <input class="form-check-input"  id="dark-mode-toggle" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                    <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-                  </div>
-            </div>
-           
-        </div>
-    </div>
-</div> -->
+                                            </div> -->
