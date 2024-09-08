@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manasvi : Employee</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container d-flex">
+
+        <!-- SIDEBAR START -->
+        <div class="sidebar rounded bg-white " id="side_nav">
+
+            <div class="header-box px-2 pt-3 pb-4 d-flex justify-content-end">
+                <button class="btn d-md-none d-block close-btn px-1 py-0 text-white">
+                    <i class="fa-solid fa-xmark fa-xl" style="color: #085ae7;"></i>
+                </button>
+            </div>
+
+            <div class="text-center">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+                    class="rounded-circle img-fluid" style="width: 100px;">
+                <h5 class="my-3">Admin </h5>
+            </div>
+
+            <hr class="h-color mx-2 my-3">
+
+            <!--    NAV MENU -->
+            <ul class="list-unstyled px-2">
+                <li class="">
+                    <a href="admin.html" class="text-decoration-none px-3 py-2 d-block text-dark my-2">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="">
+                    <a href="admin-employee.html" class="text-decoration-none px-3 py-2 d-block text-dark my-2">
+                        <i class="fa-solid fa-user-tie"></i>
+                        Employee
+                    </a>
+                </li>
+                <li class="">
+                    <a href="admin-events.html" class="text-decoration-none px-3 py-2 d-block  text-dark my-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        Events
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="text-decoration-none px-3 py-2 d-block text-dark my-2">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Activity</a>
+                </li>
+            </ul>
+
+            <div class="logo-image text-center" style="position: absolute; bottom: 3rem; left: 3rem;">
+                <img src="Images/M_logo.png" alt="logo">
+            </div>
+        </div>
+        <!-- SIDEBAR END -->
+
+
+        <!-- Main content -->
+        <div class="content">
+            <nav class="navbar navbar-expand-md navbar-dark bg-white m-1 rounded">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between d-md-none d-block">
+                        <button class="btn px-1 py-0 open-btn me-2">
+                            <i class="fa-solid fa-bars fa-lg" style="color: #095cec;"></i>
+                        </button>
+                        <a class="navbar-brand fs-4" href="#">
+                            <img src="Images/M_logo.png" alt="">
+                        </a>
+                    </div>
+                    <!-- <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fal fa-bars"></i>
+                    </button> -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="index.html">
+                                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- MAIN DASHBOARD CONTENT -->
+
+            <div class="dashboard-content px-3 pt-4">
+
+                <h2 class="fs-4 fw-bold ms-3">Profile </h2>
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card mb-4 shadow border-0 ">
+                                <div class="card-body text-center">
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+                                        alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                                    <h5 class="my-3">Bhuvan Suryawanshi</h5>
+                                    <p class="text-muted mb-1">Jr. FrontEnd Developer</p>
+                                    <p class="text-muted mb-4">EagleByte Solutions Pvt. Ltd.</p>
+                                    <div class="d-flex justify-content-center mb-2">
+                                        <a href="#" class=" text-decoration-none px-1 ">500+ Connections</a>
+                                        <a href="#" class=" text-decoration-none px-1">700+ Followers </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-4 mb-lg-0 shadow border-0">
+                                <div class="card-body p-0">
+                                    <ul class="list-group list-group-flush rounded-3">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                            <i class="fab fa-github fa-lg text-body"></i>
+                                            <p class="mb-0">mdbootstrap</p>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                            <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
+                                            <p class="mb-0">@mdbootstrap</p>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                            <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
+                                            <p class="mb-0">mdbootstrap</p>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                            <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+                                            <p class="mb-0">mdbootstrap</p>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="card mb-4 shadow border-0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <p class="mb-0">Full Name</p>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <p class="text-muted mb-0">Bhuvan Suryawanshi</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <p class="mb-0">Email</p>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <p class="text-muted mb-0">example@example.com</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <p class="mb-0">Emp ID</p>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <p class="text-muted mb-0">8745588</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <p class="mb-0">Mobile</p>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <p class="text-muted mb-0">(098) 765-4321</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <div class="card mb-4 mb-md-0 shadow border-0">
+                                        <div class="card-body">
+                                            <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project
+                                                Status
+                                            </p>
+                                            <p class="mb-1" style="font-size: .77rem;">Web Design</p>
+                                            <div class="progress rounded" style="height: 5px;">
+                                                <div class="progress-bar" role="progressbar" style="width: 80%"
+                                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
+                                            <div class="progress rounded" style="height: 5px;">
+                                                <div class="progress-bar" role="progressbar" style="width: 72%"
+                                                    aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
+                                            <div class="progress rounded" style="height: 5px;">
+                                                <div class="progress-bar" role="progressbar" style="width: 89%"
+                                                    aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
+                                            <div class="progress rounded" style="height: 5px;">
+                                                <div class="progress-bar" role="progressbar" style="width: 55%"
+                                                    aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
+                                            <div class="progress rounded mb-2" style="height: 5px;">
+                                                <div class="progress-bar" role="progressbar" style="width: 66%"
+                                                    aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row my-3">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card border-0 shadow p-2 ">
+        
+                                    <a class="text-dark fs-5 text-decoration-none fw-5 ps-2" data-bs-toggle="collapse"
+                                        href="#profile-info" role="button" aria-expanded="false"
+                                        aria-controls="collapseExample">
+                                        <i class="fa-solid fa-chevron-down"></i> Activities
+                                    </a>
+        
+                                    <div class="collapse" id="profile-info">
+                                        <div class="card card-body border-0">
+                                            <div class="card d-flex flex-row p-2 m-0">
+                                                <div class="activity-image ">
+                                                    <img class="rounded" src="/Images/post-image.jpeg" alt="image"
+                                                        style="width: 80px;">
+                                                </div>
+                                                <div class="image-content mx-3">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+                                                        facilis id animi, vel
+                                                        labore
+                                                        vero omnis expedita a culpa. Possimus.</p>
+                                                    <a href="#">Show more...</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card card-body border-0">
+                                            <div class="card d-flex flex-row p-2 m-0">
+                                                <div class="activity-image ">
+                                                    <img class="rounded" src="/Images/post-image.jpeg" alt="image"
+                                                        style="width: 80px;">
+                                                </div>
+                                                <div class="image-content mx-3">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+                                                        facilis id animi, vel
+                                                        labore
+                                                        vero omnis expedita a culpa. Possimus.</p>
+                                                    <a href="#">Show more...</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card card-body border-0">
+                                            <div class="card d-flex flex-row p-2 m-0">
+                                                <div class="activity-image ">
+                                                    <img class="rounded" src="/Images/post-image.jpeg" alt="image"
+                                                        style="width: 80px;">
+                                                </div>
+                                                <div class="image-content mx-3">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+                                                        facilis id animi, vel
+                                                        labore
+                                                        vero omnis expedita a culpa. Possimus.</p>
+                                                    <a href="#">Show more...</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT START -->
+
+    <script>
+        // Sidebar toggle functionality
+        document.querySelector('.open-btn').addEventListener('click', function () {
+            document.getElementById('side_nav').classList.add('active');
+        });
+
+        document.querySelector('.close-btn').addEventListener('click', function () {
+            document.getElementById('side_nav').classList.remove('active');
+        });
+    </script>
+
+    <!-- SCRIPT END -->
+
+</body>
+
+</html>
