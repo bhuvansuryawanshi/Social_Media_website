@@ -38,6 +38,9 @@ img {
     object-fit: cover;
 }
 
+/* COMMAN STYLE END*/
+
+
 /* MAIN BODY */
 body {
     background-color: var(--white-smoke);
@@ -46,6 +49,7 @@ body {
 textarea.form-control {
     resize: none;
 }
+/* MAIN BODY END*/
 
 
 /* NAVBAR SECTION */
@@ -54,6 +58,7 @@ textarea.form-control {
     top: 0;
     z-index: 1;
 }
+/* NAVBAR SECTION END*/
 
 
 /* MAIN SECTION */
@@ -64,6 +69,7 @@ textarea.form-control {
 .comment-section a i {
     font-size: 3rem;
 }
+/* MAIN SECTION END*/
 
 
 /* PROFILE SECTION */
@@ -75,6 +81,7 @@ textarea.form-control {
     position: fixed;
     left: 73%;
 }
+/* PROFILE SECTION END*/
 
 
 /* ACTIVITY SECTION */
@@ -85,6 +92,7 @@ textarea.form-control {
         text-decoration: underline;
     }
 }
+/* ACTIVITY SECTION END*/
 
 
 /*  MESSAGE SECTION */
@@ -149,6 +157,9 @@ textarea.form-control {
     outline: none;
     box-shadow: none;
 }
+
+/*  MESSAGE SECTION END*/
+
 
 /* SETTING SECTION */
 
