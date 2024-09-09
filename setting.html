@@ -66,6 +66,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Settings options End-->
 
             <div class="col-lg-8 mt-2 mt-lg-0">
                 <div class="tab-content" id="v-pills-tabContent">
@@ -80,61 +81,68 @@
                             <div class="card-body">
                                 <!-- INFORMTAION EDIT SECTION-->
 
-                                 <!-- FORM START -->
-                                 <form name="edit-profile" onsubmit="return validateForm();">
+                                <!-- FORM START -->
+                                <form name="edit-profile" onsubmit="return validateForm();">
                                     <div class="row">
-                                        <div class="col-md-8">
-                                
+                                        <div class="col-md-8 order-1 order-md-0">
                                             <div class="mb-3">
                                                 <label for="FullName" class="form-label">Full Name</label>
                                                 <input type="text" id="FullName" class="form-control" name="full-name">
                                                 <small class="text-danger" id="fullname-validation"></small>
                                             </div>
-                                
+
                                             <div class="mb-3">
                                                 <label for="Email" class="form-label">Email</label>
                                                 <input type="email" id="Email" class="form-control" name="u_email">
                                                 <small class="text-danger" id="email-validation"></small>
                                             </div>
-                                
+
                                             <div class="mb-3">
                                                 <label for="Username" class="form-label">Username</label>
                                                 <input type="text" id="Username" class="form-control" name="u_name">
                                                 <small class="text-danger" id="username-validation"></small>
                                             </div>
-                                
+
                                             <div class="mb-3">
                                                 <label for="employee-id" class="form-label">Employee ID</label>
                                                 <input type="text" id="employee-id" class="form-control" name="emp_id">
                                                 <small class="text-danger" id="empId-validation"></small>
                                             </div>
-                                
+
                                             <div class="mb-3">
                                                 <label for="contact-no" class="form-label">Contact Number</label>
-                                                <input type="text" id="contact-no" class="form-control" name="u_contact">
+                                                <input type="text" id="contact-no" class="form-control"
+                                                    name="u_contact">
                                                 <small class="text-danger" id="contact-validation"></small>
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-4 order-0 order-md-1">
                                             <div class="text-center">
-                                                <img alt="Profile Picture"
-                                                    src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                                                    class="rounded-circle img-responsive mt-2" width="128" height="128">
+                                                <img 
+                                                alt="Profile Picture" 
+                                                src="Images/profile-image-2.jpeg"
+                                                id="profile-pic" 
+                                                class="rounded-circle img-responsive mt-2"
+                                                width="128" height="128">
+
                                                 <div class="mt-2">
-                                                    <span class="btn btn-primary"><i class="fa fa-upload"></i></span>
+                                                    <label for="image-input"><i class="fa fa-upload"></i></label>
+                                                    <input type="file" id="image-input" accept="image/*">
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
-                                
+
                                     <!-- SUBMIT BUTTON -->
-                                    <button type="submit" class="btn btn-primary mt-2">Save changes</button>
+                                    <button type="submit" class="btn btn-primary mt-2 text-center">Save changes</button>
+                                    <!-- SUBMIT BUTTON END -->
                                 </form>
                                 <!-- FORM END-->
                             </div>
                         </div>
                     </div>
-                
+
 
                     <!-- PASSWORD SECTION -->
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
@@ -147,8 +155,8 @@
                             </div>
 
                             <div class="card-body">
-                                 <!-- FORM START-->
-                                 <form name="login_form" onsubmit="return validateLogin();">
+                                <!-- FORM START-->
+                                <form name="login_form" onsubmit="return validateLogin();">
                                     <div class="mb-3">
                                         <label for="oldpassword" class="form-label">Password</label>
                                         <input type="text" id="oldpassword" class="form-control" name="old-password">
@@ -156,24 +164,26 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="newPassword" class="form-label">Old Password</label>
-                                        <input type="password" id="newPassword" class="form-control" name="new-Password">
+                                        <input type="password" id="newPassword" class="form-control"
+                                            name="new-Password">
                                         <small class="text-danger" id="new-password-validation"></small>
                                     </div>
                                     <div class="mb-3">
                                         <button type="submit" class="btn btn-primary w-25">Log In</button>
                                     </div>
-                                   
+
                                 </form>
-                                 <!-- FORM END-->
+                                <!-- FORM END-->
                             </div>
 
                         </div>
                     </div>
+                    <!-- PASSWORD SECTION END-->
 
                     <!-- DISPLAY SECTION -->
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
                         aria-labelledby="v-pills-messages-tab" tabindex="0">
-                        
+
                         <div class="row p-2">
                             <div class="col-12">
                                 <div class="card border-0 shadow p-2">
@@ -196,13 +206,15 @@
             </div>
         </div>
     </div>
+
+    <!-- DARK MODE JS FILE -->
     <script src="dark-mode.js"></script>
 
     <!-- EDIT PROFILE VALIDATION -->
     <script>
         function validateForm() {
             let isValid = true;
-    
+
             // Full Name Validation
             const fullName = document.getElementById('FullName');
             const fullNameValidation = document.getElementById('fullname-validation');
@@ -215,7 +227,7 @@
                 fullName.classList.add('is-valid');
                 fullNameValidation.innerText = "";
             }
-    
+
             // Email Validation
             const email = document.getElementById('Email');
             const emailValidation = document.getElementById('email-validation');
@@ -233,7 +245,7 @@
                 email.classList.add('is-valid');
                 emailValidation.innerText = "";
             }
-    
+
             // Username Validation
             const username = document.getElementById('Username');
             const usernameValidation = document.getElementById('username-validation');
@@ -246,7 +258,7 @@
                 username.classList.add('is-valid');
                 usernameValidation.innerText = "";
             }
-    
+
             // Employee ID Validation
             const empId = document.getElementById('employee-id');
             const empIdValidation = document.getElementById('empId-validation');
@@ -259,7 +271,7 @@
                 empId.classList.add('is-valid');
                 empIdValidation.innerText = "";
             }
-    
+
             // Contact Number Validation
             const contact = document.getElementById('contact-no');
             const contactValidation = document.getElementById('contact-validation');
@@ -277,20 +289,21 @@
                 contact.classList.add('is-valid');
                 contactValidation.innerText = "";
             }
-    
+
             return isValid;
         }
     </script>
+    <!-- EDIT PROFILE VALIDATION END-->
 
 
     <!-- CHANGE PASSWORD VALIDATION -->
     <script>
-         function validateLogin() {
+        function validateLogin() {
             let isValid = true;
 
             const oldpassword = document.getElementById('oldpassword');
             const oldPasswordValidation = document.getElementById('old-password-validation');
-           
+
             if (oldpassword.value.trim() === "") {
                 oldpassword.classList.add('is-invalid');
                 oldPasswordValidation.innerText = "Password is required.";
@@ -316,38 +329,36 @@
             return isValid;
         }
     </script>
+    <!-- CHANGE PASSWORD VALIDATION  END-->
+
+    <!-- ADD PROFILE PICTURE -->
+    <script>
+        let profilePic = document.getElementById("profile-pic");
+        let inputFile = document.getElementById("image-input");
+    
+        // Load the saved image from localStorage when the page loads
+        window.onload = function() {
+            const savedImage = localStorage.getItem("profileImage");
+            if (savedImage) {
+                profilePic.src = savedImage;
+            }
+        };
+    
+        inputFile.onchange = function () {
+            const file = inputFile.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    profilePic.src = e.target.result;
+                    localStorage.setItem("profileImage", e.target.result);
+                };
+                reader.readAsDataURL(file);
+            }
+        };
+    </script>
+    <!-- ADD PROFILE PICTURE END-->
+    
+    
 </body>
 
 </html>
-
-
-
-<!-- <div class="form-group ">
-                                                <label for="inputUsername">Username</label>
-                                                <input type="text" class="form-control" id="inputUsername"
-                                                    placeholder="Username">
-                                            </div>
-
-                                            <div class="form-group mt-2">
-                                                <label for="inputFirstName">Full name</label>
-                                                <input type="text" class="form-control" id="inputFirstName"
-                                                    placeholder="First name">
-                                            </div>
-
-                                            <div class="form-group mt-2">
-                                                <label for="inputEmail4">Employee ID</label>
-                                                <input type="email" class="form-control" id="inputEmail4"
-                                                    placeholder="Employee ID">
-                                            </div>
-
-                                            <div class="form-group mt-2">
-                                                <label for="inputEmail4">Email</label>
-                                                <input type="email" class="form-control" id="inputEmail4"
-                                                    placeholder="Email">
-                                            </div>
-
-                                            <div class="form-group mt-2">
-                                                <label for="inputEmail4">Contact number</label>
-                                                <input type="email" class="form-control" id="inputEmail4"
-                                                    placeholder="Contact number">
-                                            </div> -->

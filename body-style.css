@@ -150,13 +150,13 @@ textarea.form-control {
     box-shadow: none;
 }
 
+/* SETTING SECTION */
 
-/*  NOTIFICATION SECTION */
-/* .notifi-card:hover {
-    background-color: var(--white-smoke);
-} */
+input#image-input{
+    display: none;
+}
 
-
+/* SETTING SECTION END */
 
 
 /*  RESPONSIVE */
