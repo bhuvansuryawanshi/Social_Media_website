@@ -37,7 +37,6 @@
 img {
     object-fit: cover;
 }
-
 /* COMMAN STYLE END*/
 
 
@@ -73,13 +72,16 @@ textarea.form-control {
 
 
 /* PROFILE SECTION */
-.profile-image img {
-    width: 40%;
-}
+
+
+/* .profile-image img {
+    width: 35%;
+} */
 
 .profile-section {
     position: fixed;
     left: 73%;
+    width: 21%;
 }
 /* PROFILE SECTION END*/
 
@@ -186,6 +188,8 @@ input#image-input{
         margin-top: 10px;
         text-align: right;
     }
+
+    
 }
 
 @media (max-width: 576px) {
