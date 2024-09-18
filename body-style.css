@@ -73,11 +73,6 @@ textarea.form-control {
 
 /* PROFILE SECTION */
 
-
-/* .profile-image img {
-    width: 35%;
-} */
-
 .profile-section {
     position: fixed;
     left: 73%;
@@ -161,15 +156,6 @@ textarea.form-control {
 }
 
 /*  MESSAGE SECTION END*/
-
-
-/* SETTING SECTION */
-
-input#image-input{
-    display: none;
-}
-
-/* SETTING SECTION END */
 
 
 /*  RESPONSIVE */
