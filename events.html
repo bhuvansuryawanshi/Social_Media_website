@@ -127,68 +127,72 @@
                     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
 
-                                <div class="modal-body">
-                                    <div class="row d-flex justify-content-center">
-                                        <div class="col-12">
-                                            <div class="card shadow-0 border" style="background-color: #f0f2f5;">
-                                                <div class="card-body p-4">
+                            <form action="">
 
-                                                    <div class="card mb-4">
-                                                        <div class="card-body">
-                                                            <p>Type your note, and hit enter to add it</p>
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <div class="row d-flex justify-content-center">
+                                            <div class="col-12">
+                                                <div class="card shadow-0 border" style="background-color: #f0f2f5;">
+                                                    <div class="card-body p-4">
 
-                                                            <div class="d-flex justify-content-between">
-                                                                <div class="d-flex flex-row align-items-center">
-                                                                    <img src="Images/profile-image-2.jpeg" alt="avatar"
-                                                                        width="25" height="25" />
-                                                                    <p class="small mb-0 ms-2">Martha</p>
-                                                                </div>
-                                                                <div class="d-flex flex-row align-items-center">
-                                                                    <p class="small text-muted mb-0">Upvote?</p>
-                                                                    <i class="far fa-thumbs-up mx-2 fa-xs text-body"
-                                                                        style="margin-top: -0.16rem;"></i>
-                                                                    <p class="small text-muted mb-0">3</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                        <div class="card mb-4">
+                                                            <div class="card-body">
+                                                                <p>Type your note, and hit enter to add it</p>
 
-                                                    <div class="card mb-4">
-                                                        <div class="card-body">
-                                                            <p>Good</p>
-
-                                                            <div class="d-flex justify-content-between">
-                                                                <div class="d-flex flex-row align-items-center">
-                                                                    <img src="Images/profile-image.jpeg" alt="avatar"
-                                                                        width="25" height="25" />
-                                                                    <p class="small mb-0 ms-2">Johny</p>
-                                                                </div>
-                                                                <div class="d-flex flex-row align-items-center">
-                                                                    <p class="small text-muted mb-0">Upvote?</p>
-                                                                    <i class="far fa-thumbs-up mx-2 fa-xs text-body"
-                                                                        style="margin-top: -0.16rem;"></i>
-                                                                    <p class="small text-muted mb-0">4</p>
+                                                                <div class="d-flex justify-content-between">
+                                                                    <div class="d-flex flex-row align-items-center">
+                                                                        <img src="Images/profile-image-2.jpeg"
+                                                                            alt="avatar" width="25" height="25" />
+                                                                        <p class="small mb-0 ms-2">Martha</p>
+                                                                    </div>
+                                                                    <div class="d-flex flex-row align-items-center">
+                                                                        <p class="small text-muted mb-0">Upvote?</p>
+                                                                        <i class="far fa-thumbs-up mx-2 fa-xs text-body"
+                                                                            style="margin-top: -0.16rem;"></i>
+                                                                        <p class="small text-muted mb-0">3</p>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
 
-                                                    <div data-mdb-input-init class="form-outline ">
-                                                        <input type="text" id="addANote" class="form-control"
-                                                            placeholder="Type reply..." />
+                                                        <div class="card mb-4">
+                                                            <div class="card-body">
+                                                                <p>Good</p>
+
+                                                                <div class="d-flex justify-content-between">
+                                                                    <div class="d-flex flex-row align-items-center">
+                                                                        <img src="Images/profile-image.jpeg"
+                                                                            alt="avatar" width="25" height="25" />
+                                                                        <p class="small mb-0 ms-2">Johny</p>
+                                                                    </div>
+                                                                    <div class="d-flex flex-row align-items-center">
+                                                                        <p class="small text-muted mb-0">Upvote?</p>
+                                                                        <i class="far fa-thumbs-up mx-2 fa-xs text-body"
+                                                                            style="margin-top: -0.16rem;"></i>
+                                                                        <p class="small text-muted mb-0">4</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div data-mdb-input-init class="form-outline ">
+                                                            <input type="text" id="addANote" class="form-control"
+                                                                placeholder="Type reply..." />
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                        <button type="Submit" class="btn btn-primary">Send</button>
+                                    </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="Submit" class="btn btn-primary">Send</button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
 
@@ -197,24 +201,7 @@
         </div>
         <!-- Event Card Template end -->
 
-        <!-- Event Card Template 2 -->
-        <!-- <div class="row ">
-            <div class="col-12 mt-2 shadow bg-white p-2 rounded">
-                <div class="event-title">
-                    <h5 class="ps-2"><i class="fa-solid fa-cake-candles"></i> Birthday</h5>
-                </div>
-                <hr>
-                <div class="event-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta aut voluptate, temporibus nulla repellendus voluptatem nostrum.</p>
-                    <p class="text-primary text-end">Date : 7 Sept 2024</p>
-                </div>
-                <hr>
-                <div class="event-footer">
-                    <p>Reply <i class="fa-solid fa-reply fa-flip-horizontal"></i></p>
-                </div>
-            </div>
-        </div> -->
-        <!-- Event Card Template 2 end-->
+       
 
     </div>
 

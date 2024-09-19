@@ -37,7 +37,6 @@
 img {
     object-fit: cover;
 }
-
 /* COMMAN STYLE END*/
 
 
@@ -73,13 +72,11 @@ textarea.form-control {
 
 
 /* PROFILE SECTION */
-.profile-image img {
-    width: 40%;
-}
 
 .profile-section {
     position: fixed;
     left: 73%;
+    width: 21%;
 }
 /* PROFILE SECTION END*/
 
@@ -161,15 +158,6 @@ textarea.form-control {
 /*  MESSAGE SECTION END*/
 
 
-/* SETTING SECTION */
-
-input#image-input{
-    display: none;
-}
-
-/* SETTING SECTION END */
-
-
 /*  RESPONSIVE */
 @media (max-width: 768px) {
     .message-searchbar form {
@@ -186,6 +174,8 @@ input#image-input{
         margin-top: 10px;
         text-align: right;
     }
+
+    
 }
 
 @media (max-width: 576px) {
